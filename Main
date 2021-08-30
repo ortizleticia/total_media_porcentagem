@@ -1,0 +1,35 @@
+total_idade = 0
+total_idade2 = 0
+soma_altura = 0
+media_altura = 0
+total_pessoas_menos_50 = 0
+
+for n in range(0, 10):
+    print("Informe a idade")
+    idade = int(input())
+    print("Informe a altura")
+    altura = float(input())
+    print("Informe o peso")
+    peso = float(input())
+
+#a. o número de pessoas com idade maior que 50;
+
+    if(idade>50):
+        total_idade = total_idade + 1  
+        
+#b. a média das alturas das pessoas com menos de 70 e mais de 50 anos;
+
+    if(idade<70 and idade>50):
+        total_idade2 = total_idade2 + 1
+        soma_altura += altura
+        media_altura = soma_altura/total_idade2
+        
+#c. a porcentagem de pessoas com menos de 50 quilos.
+
+    if(peso<50):
+        total_pessoas_menos_50 = total_pessoas_menos_50 + 1
+        total_porcentagem = total_pessoas_menos_50/4
+
+print(f"\nO total de pessoas acima de 50 anos é: {total_idade}")            
+print(f"\nA média da altura das pessoas com mais de 50 anos e menos de 70 anos é: {media_altura}")
+print(f"\nA porcentagem de pessoas com menos de 50 quilos é:{total_porcentagem:.0%}")
